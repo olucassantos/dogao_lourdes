@@ -3,25 +3,46 @@
 	padding: 0;
 }
 
+/* Cria uma classe para limpar as flutuações do CSS (float) */
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+@font-face {
+	font-family: 'spring-may';
+	src: url('fontes/Spring_in_May.ttf');
+}
+
 body{
+	background-color: #ff9800;
 	font-family: 'Trebuchet MS'; /*Muda a fonte do texto*/
 }
+
+/* 
+	CABEÇALHO E MENU
+*/
 
 .cabecalho{
 	background-color: #FA9908; /*Muda a cor de fundo do elemento*/
 }
 
 .cabecalho .titulo{
-	text-align: center; /*Centralizar o elemento*/
-	font-size: 80px; /* Aumenta o tamanho do texto */
 	color: #FA0E08; /*Muda a cor do texto*/
+	font-size: 130px; /* Aumenta o tamanho do texto */
+	font-family: spring-may;
+	height: 165px;
+	margin-bottom: 10px;
+	text-align: center; /*Centralizar o elemento*/
+	text-shadow: 1px 1px 6px #fff; /*Adiciona uma sombra ao texto*/
 }
 
 .cabecalho .barra_navegacao{
+    background-color: #F65C13;
 	border-top: 0px solid #FA0E08; /*Adiciona uma borda no topo do elemento*/
     border-bottom: 5px solid #FA0E08; /*Adiciona uma borda no bottom do elemento*/
     margin-top: 10px; /*Adiciona margem ao elemento*/
-    background-color: #F65C13;
     text-align: center;
 }
 
@@ -31,16 +52,75 @@ body{
 }
 
 .barra_navegacao ul li a{
-	text-decoration: none; /*Remover o sublinhado do link*/
 	color: #fff;
+	display: inline-block;
 	font-weight: bold; /*Coloca o texto em negrito*/
 	font-size: 25px;
 	padding: 15px 30px;
-	display: inline-block;
+	text-decoration: none; /*Remover o sublinhado do link*/
 }
 
 .barra_navegacao ul li a:hover{
-	color: #FA0E08;
 	background-color: #FFF;
+	color: #FA0E08;
 	transition: .5s;
+}
+
+/* 
+	FIM DO CABEÇALHO E MENU
+*/
+
+/* 
+	BANNER
+*/
+
+.banner img{
+	width: 100%;
+}
+
+.promocoes .titulo{
+	color: #FA0E08;
+	font-size: 90px;
+    font-family: 'spring-may';
+    margin-top: 50px;
+	text-align: center;
+	text-shadow: 1px 1px 1px #000;
+}
+
+.promocao .imagem, .promocao .informacoes{
+	float: left;
+	width: 50%;
+	height: 100%;
+}
+
+.promocao{
+	width: 70%;
+	margin: 0 auto;
+	border: 10px dashed #FA0E08;
+	padding: 20px;
+	margin-bottom: 30px;
+}
+
+.promocao .imagem img{
+	width: 100%;
+}
+
+.promocao .titulo{
+	white-space: nowrap;
+	padding: 10px;
+}
+
+.promocao .descricao{
+	font-size: 45px;
+	text-align: center;
+	text-shadow: 1px 1px 1px #FA0E08;
+	padding: 10px;
+}
+
+.promocao .valor{
+	text-align: center;
+	font-size: 50px;
+	font-family: 'spring-may';
+	text-shadow: 1px 1px 1px #FA0E08;
+	padding: 10px;
 }
